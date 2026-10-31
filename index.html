@@ -34,7 +34,7 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
-            color: #5eead4;
+            color: #fde68a;
             background: rgba(20,184,166,0.12);
             padding: 6px 12px;
             border-radius: 999px;
@@ -42,7 +42,7 @@
         .dot {
             width: 8px; height: 8px;
             border-radius: 50%;
-            background: #2dd4bf;
+            background: #facc15;
             animation: pulse 1.8s infinite;
         }
         @keyframes pulse {
@@ -51,6 +51,15 @@
         }
         h1 { font-size: 28px; margin: 18px 0 8px; color: #fff; }
         .sub { color: #94a3b8; line-height: 1.5; margin-bottom: 24px; }
+        .steps {
+            background: rgba(15,23,42,0.6);
+            border-radius: 12px;
+            padding: 14px 18px 14px 36px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
         .info {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -58,7 +67,7 @@
             margin-bottom: 24px;
         }
         .box {
-            background: rgba(15,23,42,0.6);
+            background: rgba(250,204,21,0.12);
             border-radius: 12px;
             padding: 14px;
         }
@@ -70,7 +79,7 @@
             padding: 12px;
             border: none;
             border-radius: 12px;
-            background: linear-gradient(90deg, #8b5cf6, #14b8a6);
+            background: linear-gradient(90deg, #f59e0b, #ec4899);
             color: #fff;
             font-size: 15px;
             font-weight: 600;
@@ -82,18 +91,24 @@
             margin-top: 14px;
             text-align: center;
             font-size: 14px;
-            color: #5eead4;
+            color: #fde68a;
             min-height: 20px;
         }
     </style>
 </head>
 <body>
     <main class="card">
-        <div class="status"><span class="dot"></span> Server aktif</div>
-        <h1>Cloud Web Test</h1>
+       <div class="status"><span class="dot"></span> Versi 2 - Hasil Modifikasi</div>da
+       <h1>Continuous Deployment</h1>
         <p class="sub">Arsyad Raviandra Bahri <br>
             102042400013<br>
          </p>
+        <ol class="steps">
+    <li>Edit file index.html di GitHub</li>
+    <li>Commit perubahan</li>
+    <li>Vercel mendeteksi perubahan</li>
+    <li>Website otomatis diperbarui</li>
+</ol>
 
         <div class="info">
             <div class="box"><span>Tanggal</span><strong id="date"></strong></div>
@@ -101,7 +116,7 @@
             <div class="box wide"><span>Alamat halaman</span><strong id="url"></strong></div>
         </div>
 
-        <button class="btn" onclick="sapa()">Tes Koneksi</button>
+        <button class="btn" onclick="sapa()">Tes Deployment</button>
         <p id="msg"></p>
     </main>
 
@@ -118,7 +133,7 @@
         document.getElementById("url").textContent = window.location.host || "localhost";
 
         function sapa() {
-            document.getElementById("msg").textContent = "Berhasil! Website kamu berjalan dengan baik.";
+            document.getElementById("msg").textContent = "Berhasil! Perubahan dari GitHub sudah live.";
         }
     </script>
 </body>
